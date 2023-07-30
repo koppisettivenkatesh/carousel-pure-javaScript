@@ -1,6 +1,71 @@
-*{
-  font-family:'poppins',serif;
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row ;
 }
-input{
-  outline: none;
+
+#left,#right{
+  width: 2rem;
+  cursor: pointer;
 }
+
+.scroll{
+  width: 78rem;
+  height: 40rem;
+  display: flex;
+  overflow-x :scroll;
+  box-shadow: 3px 3px 10px rgb(179, 177, 177);
+  border-radius: 10px;
+
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+img{
+    aspect-ratio: 4/2;
+
+}
+
+#prev{
+  animation-duration: 1s;
+  transition: ease-out .1s;
+}
+
+
+#current{
+  animation-duration: 1s;
+  transition: ease-out .1s;
+}
+
+#next{
+  animation-duration: 1s;
+  transition: ease-out .1s;
+}
+
+@keyframes left {
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+  
+}
+
+
+
+@keyframes right {
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+  
+}
+
+
+
